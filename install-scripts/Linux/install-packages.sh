@@ -1,3 +1,4 @@
+touch ~/install_progress_log.txt
 log_file=~/install_progress_log.txt
 
 sudo apt-get -y install zsh
@@ -7,14 +8,15 @@ else
     echo "zsh FAILED TO INSTALL!!!" >> $log_file
 fi
 
-sudo apt-get install zsh-syntax-highlighting
+# Install oh-my-zsh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-sudo apt-get -y install vim-gnome
-if type -p vim > /dev/null; then
-    echo "Vim Installed" >> $log_file
-else
-    echo "Vim FAILED TO INSTALL!!!" >> $log_file
-fi
+# OhMyZsh Autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# sudo apt-get install zsh-syntax-highlighting
 
 sudo apt-get -y install curl
 if type -p curl > /dev/null; then

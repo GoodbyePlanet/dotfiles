@@ -9,6 +9,7 @@
 #==============
 # Variables
 #==============
+touch ~/install_progress_log.txt
 dotfiles_dir=~/dotfiles
 log_file=~/install_progress_log.txt
 
@@ -24,7 +25,6 @@ sudo rm -rf ~/.zshrc > /dev/null 2>&1
 # Create symlinks in the home folder
 # Allow overriding with files of matching names in the custom-configs dir
 #==============
-ln -sf $dotfiles_dir/zsh/zsh_prompt ~/.zsh_prompt
 ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
 # ln -sf $dotfiles_dir/config ~/.config
 # ln -sf $dotfiles_dir/custom-configs/custom-snips ~/.vim/custom-snips
