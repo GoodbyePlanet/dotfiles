@@ -47,9 +47,6 @@ ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
 #==============
 # sudo chsh -s /bin/zsh
 
-#==============
-# Give the user a summary of what has been installed
-#==============
 echo -e "\n====== Summary ======\n"
 cat $log_file
 rm $log_file

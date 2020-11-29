@@ -1,5 +1,5 @@
 #==============
-# Install all the packages
+# Install packages
 #==============
 sudo chown -R $(whoami):admin /usr/local
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -10,12 +10,15 @@ brew update
 echo "export PATH='/usr/local/bin:$PATH'\n" >> ~/.bashrc
 source ~/.bashrc
 
+# Install zsh
+brew install zsh
+
 #==============
 # Remove old dot flies
 #==============
 sudo rm -rf ~/.zsh_prompt > /dev/null 2>&1
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
-# sudo rm -rf ~/.gitconfig > /dev/null 2>&1
+sudo rm -rf ~/.gitconfig > /dev/null 2>&1
 
 #==============
 # Create symlinks in the home folder
@@ -25,37 +28,19 @@ SYMLINKS=()
 SYMLINKS+=('.zsh_prompt')
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 SYMLINKS+=('.zshrc')
-# ln -sf ~/dotfiles/config ~/.config
-# SYMLINKS+=('.config')
-# ln -sf ~/dotfiles/custom-configs/custom-snips ~/.vim/custom-snips
-# SYMLINKS+=('.vim/custom-snips')
-
-
-# if [ -n "$(find ~/dotfiles/custom-configs -name gitconfig)" ]; then
-#     ln -s ~/dotfiles/custom-configs/**/gitconfig ~/.gitconfig
-# else
-#     ln -s ~/dotfiles/gitconfig ~/.gitconfig
-# fi
-# SYMLINKS+=('.gitconfig')
-
-# if [ -n "$(find ~/dotfiles/custom-configs -name tmux.conf)" ]; then
-#     ln -s ~/dotfiles/custom-configs/**/tmux.conf ~/.tmux.conf
-# else
-#     ln -s ~/dotfiles/mac-tmux/tmux.conf ~/.tmux.conf
-# fi
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+SYMLINKS+=('.gitconfig')
 
 echo ${SYMLINKS[@]}
 
 cd ~
+# Dump all currently installed software via Homebrew into Brewfile
 brew bundle
 cd -
 
 #==============
 # Set zsh as the default shell
 #==============
-# chsh -s /bin/zsh
+# sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
 
-#==============
-# And we are done
-#==============
-echo -e "\n====== All Done!! ======\n"
+echo -e "\n====== Finished!! ======\n"
