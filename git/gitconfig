@@ -1,0 +1,20 @@
+[init]
+        defaultBranch = main
+[alias]
+        st = status
+        pullup = pull --rebase --autostash
+        sts = status --short --branch
+        glnp = log --oneline -5
+        cob = checkout -b
+        undo = reset HEAD~1 --mixed
+        aaac = !git add -A && git commit -m
+        npl = "!f() { DEFAULT_N=${1-10};  git --no-pager log --oneline --decorate --graph -${1-$DEFAULT_N};  }; f"
+        la = !git config -l | grep alias | cut -c 7-
+        gup = !git push --set-upstream origin $(current_branch)
+        pf = push --force-with-lease
+[user]
+
+[core]
+        pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+        ui = auto

@@ -1,0 +1,46 @@
+{
+  "editor.formatOnSave": false,
+  "editor.renderWhitespace": "all",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#303030",
+    "statusBar.noFolderBackground": "#303030",
+    "statusBar.debuggingBackground": "#303030",
+    "tab.activeBorder": "#ff0000",
+    "editorCursor.foreground": "#c6e902"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.statusBar.enabled": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.keymap": "alternate",
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "window.zoomLevel": 0,
+  "workbench.editor.showTabs": true,
+  "todohighlight.isEnable": true,
+  "rest-client.rememberCookiesForSubsequentRequests": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "One Dark Pro Italic Vivid"
+}

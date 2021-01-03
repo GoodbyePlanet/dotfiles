@@ -18,7 +18,7 @@ log_file=~/install_progress_log.txt
 #==============
 sudo rm -rf ~/.zsh_prompt > /dev/null 2>&1
 sudo rm -rf ~/.zshrc > /dev/null 2>&1
-# sudo rm -rf ~/.gitconfig > /dev/null 2>&1
+sudo rm -rf ~/.gitconfig > /dev/null 2>&1
 
 
 #==============
