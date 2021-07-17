@@ -7,6 +7,10 @@
         glnp = log --oneline -5
         cob = checkout -b
         undo = reset HEAD~1 --mixed
+        com=!f() { TICKET_NUM="$(git symbolic-ref --short HEAD | grep -w -Eo "[A-Z]{1,10}-?-\d+")"; git commit -m "$TICKET_NUM: $1"; }; f
+	ps=!git push origin $(git rev-parse --abbrev-ref HEAD)
+	pl=!git pull origin $(git rev-parse --abbrev-ref HEAD)
+	co=git checkout $(git branch -a | fzf)
         aaac = !git add -A && git commit -m
         npl = "!f() { DEFAULT_N=${1-10};  git --no-pager log --oneline --decorate --graph -${1-$DEFAULT_N};  }; f"
         la = !git config -l | grep alias | cut -c 7-
