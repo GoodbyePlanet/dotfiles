@@ -1,0 +1,50 @@
+"" Source your .vimrc
+" source ~/.vimrc
+
+set number
+set relativenumber
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" indentation
+set autoindent
+set smartindent
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
+
+" no error bells
+set visualbell
+set noerrorbells
+
+" scroll
+set scrolloff=8
+
+" re-maps
+inoremap jj <Esc>
+
+noremap J 2j
+noremap K 2k
+
+sethandler <S-k> n:vim
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+let mapleader=" "
+
+nnoremap <leader><CR> :noh<CR>
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
