@@ -29,16 +29,27 @@ noremap K 2k
 nnoremap ,r :action ContextRun<CR>
 nnoremap ,c :action RunClass<CR>
 nnoremap ,u :action Rerun<CR>
+nnoremap ;q :action CloseContent<CR>
+nnoremap ;a :action CloseAllEditors<CR>
+
+" Navigation
 nnoremap c- :action SplitHorizontally<CR>
 nnoremap c\ :action SplitVertically<CR>
+nnoremap cm :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <c-f> :action GotoFile<CR>
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <TAB> :action PreviousTab<CR>
+nnoremap <s-TAB> :action NextTab<CR>
 
 sethandler <S-k> n:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
 
 "" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-" set scrolloff=5
-
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
@@ -52,14 +63,61 @@ nnoremap <leader>cc :action IntroduceConstant<CR>
 nnoremap <leader>cn :action Inline<CR>
 nnoremap <leader>ga :action GotoImplementation<CR>
 
-" nnoremap ge :action GotoNextError<CR>
-" nnoremap gE :action GotoPreviousError<CR>
-
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
+
+" Plugins
+
+" Easy motion plugin
+" Emulates vim-easymotion
+" Make sure to install IdeaVim-EasyMotion and AceJump Plugins
+" See https://github.com/AlexPl292/IdeaVim-EasyMotion#supported-commands for details
+" Plug 'easymotion/vim-easymotion'
+set easymotion
+map <leader>J <Plug>(easymotion-s)
+map <leader>j <Plug>(easymotion-f)
+
+" NERDTree plugin
+" Emulates NERDTree
+" Basic Commands:
+"   Ctrl-n  Open NERDTree (mapped bellow)
+"   q	    Close the NERDTree window
+"   o   	Open files, directories and bookmarks
+"   go   	Open selected file, but leave cursor in the NERDTree
+"   i   	Open selected file in a split window
+"   gi   	Same as i, but leave the cursor on the NERDTree
+"   s   	Open selected file in a new vsplit
+"   gs   	Same as s, but leave the cursor on the NERDTree
+"   <C-J>	Jump down to next sibling of the current directory
+"   <C-K>	Jump up to previous sibling of the current directory
+"   R	    Recursively refresh the current root
+"   m	    Display the NERDTree menu
+" See  https://github.com/JetBrains/ideavim/wiki/NERDTree-support for details
+set NERDTree
+map <c-n> :NERDTree<CR>
+
+" Surround Plugin
+" Emulates vim-surround. Mappings to easily delete, change and add such surroundings in pairs
+" Basic Commands:
+"   cs   Change surroundings
+"   cst  Change surroundings tag
+"   ds   Delete surroundings
+"   dst  Delete surroundings tag
+"   ys   Surround text object
+" See https://github.com/tpope/vim-surround/blob/master/doc/surround.txt for details
+set surround
+
+" Multiple-cursors plugin
+" Emulates vim-multiple-cursors
+" Basic Commands:
+"   <C-n> start multicursor
+"   <C-n> next match
+"   <C-x> skip next match
+"   <C-p> remove current match and go back to previous one
+" See https://github.com/terryma/vim-multiple-cursors for details
+set multiple-cursors
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
