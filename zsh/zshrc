@@ -59,13 +59,11 @@ add-zsh-hook precmd vcs_info
 alias ..="cd .."
 alias ...="cd ../.."
 alias la="ls -lAh"
-alias docker_wipe_all="docker system prune --all --volumes"
-alias docker_wipe="docker system prune"
+alias gco="git checkout"
 alias zshconfig="vim ~/.zshrc"
-alias used_ports='lsof -i -P -n | grep LISTEN'
-alias start-node='cd /Users/nemanja.vasic.ext/Documents/projects/ps-start-node'
-alias retention-service='cd /Users/nemanja.vasic.ext/Documents/projects/ps-retention-service'
-alias seller-feedback='cd /Users/nemanja.vasic.ext/Documents/projects/ps-seller-feedback-node'
+alias used_ports="lsof -i -P -n | grep LISTEN"
+alias docker_wipe="docker system prune"
+alias docker_wipe_all="docker system prune --all --volumes"
 
 #
 # Prompt
@@ -85,3 +83,5 @@ eval "$(jenv init -)"
 
 # install zsh with brew or via GitHub script
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export MOB_WIP_BRANCH_PREFIX="mob-"
