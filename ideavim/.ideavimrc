@@ -36,7 +36,10 @@ nnoremap ;a :action CloseAllEditors<CR>
 nnoremap c- :action SplitHorizontally<CR>
 nnoremap c\ :action SplitVertically<CR>
 nnoremap cm :action MoveEditorToOppositeTabGroup<CR>
+nnoremap gn :action MethodDown<CR>
+nnoremap gb :action MethodUp<CR>
 nnoremap <c-f> :action GotoFile<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
