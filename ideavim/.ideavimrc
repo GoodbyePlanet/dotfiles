@@ -37,10 +37,7 @@ nnoremap ;x :action CloseAllEditorsButActive<CR>
 nnoremap c- :action SplitHorizontally<CR>
 nnoremap c\ :action SplitVertically<CR>
 nnoremap cm :action MoveEditorToOppositeTabGroup<CR>
-nnoremap gn :action MethodDown<CR>
-nnoremap gb :action MethodUp<CR>
 nnoremap <c-f> :action GotoFile<CR>
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
@@ -61,6 +58,7 @@ sethandler <c-k> a:vim
 let mapleader=" "
 
 nnoremap <leader><CR> :noh<CR>
+nnoremap <leader>r :action RenameElement<CR>
 nnoremap <leader>cm :action ExtractMethod<CR>
 nnoremap <leader>cv :action IntroduceVariable<CR>
 nnoremap <leader>cc :action IntroduceConstant<CR>
