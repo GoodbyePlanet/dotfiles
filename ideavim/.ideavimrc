@@ -127,6 +127,6 @@ map mp <A-p>
 " Commentary
 set vim-commentary
 
-" gcc - Comment/uncomment current line
-" gc -  Comment/uncomment lines with motion, also selected text
-" gcap -  Comment/uncomment current paragraph
+" gcc  Comment/uncomment current line
+" gc   Comment/uncomment lines with motion, also selected text
+" gcap Comment/uncomment current paragraph
