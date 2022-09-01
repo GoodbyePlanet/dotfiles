@@ -122,3 +122,10 @@ set multiple-cursors
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
+
+" Commentary
+set vim-commentary
+
+" gcc - Comment/uncomment current line
+" gc -  Comment/uncomment lines with motion, also selected text
+" gcap -  Comment/uncomment current paragraph
