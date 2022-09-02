@@ -98,7 +98,7 @@ map <leader>j <Plug>(easymotion-f)
 "   m	    Display the NERDTree menu
 " See  https://github.com/JetBrains/ideavim/wiki/NERDTree-support for details
 set NERDTree
-map <c-n> :NERDTree<CR>
+map <leader>n :NERDTree<CR>
 
 " Surround Plugin
 " Emulates vim-surround. Mappings to easily delete, change and add such surroundings in pairs
@@ -119,13 +119,13 @@ set surround
 "   <C-x> skip next match
 "   <C-p> remove current match and go back to previous one
 " See https://github.com/terryma/vim-multiple-cursors for details
-set multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
 map mc <A-n>
 map mx <A-x>
 map mp <A-p>
 
 " Commentary
-set vim-commentary
+Plug 'tpope/vim-commentary'
 
 " gcc  Comment/uncomment current line
 " gc   Comment/uncomment lines with motion, also selected text
