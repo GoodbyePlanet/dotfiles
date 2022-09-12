@@ -136,5 +136,8 @@ set background=dark
 "set background=light
 colorscheme gruvbox
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 syntax on
 
