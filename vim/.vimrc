@@ -16,6 +16,7 @@ set scrolloff=8
 set scrolloff=8
 set mouse=a
 set belloff=all
+set backspace=indent,eol,start
 
 inoremap jj <Esc>
 
