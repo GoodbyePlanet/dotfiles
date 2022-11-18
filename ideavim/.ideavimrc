@@ -57,6 +57,7 @@ sethandler <c-k> a:vim
 
 let mapleader=" "
 
+nnoremap <leader>y "*y
 nnoremap <leader><CR> :noh<CR>
 nnoremap <leader>r :action RenameElement<CR>
 nnoremap <leader>cm :action ExtractMethod<CR>
