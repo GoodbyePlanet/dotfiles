@@ -45,6 +45,8 @@ nnoremap <c-k> <c-w>k
 
 nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
+noremap y "*y
+noremap yy "*yy
 
 sethandler <S-k> n:vim
 sethandler <c-j> a:vim
