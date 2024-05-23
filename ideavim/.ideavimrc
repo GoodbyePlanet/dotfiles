@@ -32,6 +32,8 @@ nnoremap ,u :action Rerun<CR>
 nnoremap ;q :action CloseContent<CR>
 nnoremap ;a :action CloseAllEditors<CR>
 nnoremap ;x :action CloseAllEditorsButActive<CR>
+nnoremap zC :action CollapseRegionRecursively<CR>
+nnoremap zO :action ExpandRegionRecursively<CR>
 
 " Navigation
 nnoremap c- :action SplitHorizontally<CR>
@@ -67,9 +69,13 @@ nnoremap <leader>cv :action IntroduceVariable<CR>
 nnoremap <leader>cc :action IntroduceConstant<CR>
 nnoremap <leader>cn :action Inline<CR>
 nnoremap <leader>ga :action GotoImplementation<CR>
+nnoremap <leader>p :action ParameterInfo<CR>
+nnoremap <leader>i :action ShowErrorDescription<CR>
 
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gb :action Back<CR>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 
