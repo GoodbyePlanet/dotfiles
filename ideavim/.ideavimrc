@@ -75,6 +75,7 @@ nnoremap <leader>i :action ShowErrorDescription<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 nnoremap gd :action GotoDeclaration<CR>
+nnoremap ga :action GotoImplementation<CR>
 nnoremap gb :action Back<CR>
 
 " Find more examples here: https://jb.gg/share-ideavimrc
