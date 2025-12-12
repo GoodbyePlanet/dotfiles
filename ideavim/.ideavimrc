@@ -71,6 +71,7 @@ nnoremap <leader>cn :action Inline<CR>
 nnoremap <leader>ga :action GotoImplementation<CR>
 nnoremap <leader>p :action ParameterInfo<CR>
 nnoremap <leader>i :action ShowErrorDescription<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
