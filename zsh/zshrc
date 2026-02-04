@@ -28,6 +28,7 @@ unsetopt BEEP
 
 # Enable vi mode
 bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
 
 REPORTTIME=3
 HISTFILE=~/.zsh_history
